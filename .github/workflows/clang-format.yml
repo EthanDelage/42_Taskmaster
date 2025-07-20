@@ -7,11 +7,11 @@ on:
 jobs:
   clang-format:
     runs-on: ubuntu-latest
-    container: llvm/clang:latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      - name: Run clang-format check
-        run: git ls-files "*.c" "*.h" | xargs clang-format --dry-run --Werror
+      - name: Check formatting with clang-format-check action
+        uses: xhimself/clang-format-check@v1.3
+        with:
+          files: '*.c,*.h'
