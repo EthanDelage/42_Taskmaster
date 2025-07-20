@@ -1,0 +1,4 @@
+#ifndef TASKMASTER_UTILS_H
+#define TASKMASTER_UTILS_H
+
+#endif // TASKMASTER_UTILS_H
