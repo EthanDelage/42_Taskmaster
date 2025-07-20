@@ -1,4 +1,4 @@
-name: Clang Format Check
+name: Clang Format Checker
 
 on:
   pull_request:
@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Check formatting with clang-format-check action
-        uses: xhimself/clang-format-check@v1.3
+      - name: Clang Format Github Action
+        uses: RafikFarhad/clang-format-github-action@v4
         with:
-          files: '*.c,*.h'
+          sources: "src/**/*.c,include/**/*.h"
